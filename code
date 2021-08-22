@@ -1,0 +1,498 @@
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(11, OUTPUT);
+  Serial.begin(9600);
+  Serial.print("\nEnter text-");
+}
+
+void dot()
+{
+  	// Function for dot 
+	digitalWrite(13,HIGH);
+    tone(11, 3000);
+    delay(200); // Duration for dot
+    digitalWrite(13,LOW);
+    noTone(11);
+  	delay(200);
+
+}
+
+void dash()
+{
+  	// Function for dash
+	digitalWrite(13,HIGH);
+    tone(11, 3000);
+    delay(600); // Duration for dash=3*(Duration for dot). Duration for dot is set at 200. Hence, 600
+    digitalWrite(13,LOW);
+    noTone(11);
+  	delay(200);
+}
+
+void loop()
+{
+  if (Serial.available() >0){
+    String x=Serial.readString();
+    Serial.readString();
+    Serial.print(x);
+    for(int i=0;i<x.length();i++){
+      
+      switch(x[i]){
+        
+        case ' ':
+        {
+        	delay(1400);
+        }
+        
+        case 'a':
+        {
+        	dot();
+         	dash();
+        	delay(400); // Delay between letters of a word = 3*(Delay of dot)
+          
+          	break;
+        }
+        
+        case 'b':
+        {
+          dash();
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'c':
+        {
+          dash();
+          dot();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'd':
+        {
+          dash();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'e':
+        {
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'f':
+        {
+          dot();
+          dot();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'g':
+        {
+          dash();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'h':
+        {
+          dot();
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'i':
+        {
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'j':
+        {
+          dot();
+          dash();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'k':
+        {
+          dash();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        } 
+        
+        case 'l':
+        {
+          dot();
+          dash();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'm':
+        {
+          dash();
+          dash();
+          delay(400);
+      
+          break;
+        }
+        
+        case 'n':
+        {
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'o':
+        {
+          dash();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'p':
+        {
+          dot();
+          dash();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'q':
+        {
+          dash();
+          dash();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'r':
+        {
+          dot();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 's':
+        {
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case 't':
+        {
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'u':
+        {
+          dot();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'v':
+        {
+          dash();
+          dot();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'w':
+        {
+          dot();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'x':
+        {
+          dash();
+          dot();
+          dot();
+          dash();
+          delay(400);
+        }
+        
+        case 'y':
+        {
+          dash();
+          dot();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case 'z':
+        {
+          dash();
+          dash();
+          dot();
+          dash();
+          delay(400);
+     	  
+          break;
+        }
+        
+        case '.':
+        {
+          dot();
+          dash();
+          dot();
+          dash();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case ',':
+        {
+          dash();
+          dash();
+          dot();
+          dot();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case '?':
+        {
+          dot();
+          dot();
+          dash();
+          dash();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '/':
+        {
+          dash();
+          dot();
+          dot();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '@':
+        {
+          dot();
+          dash();
+          dash();
+          dot();
+          dash();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '1':
+        {
+          dot();
+          dash();
+          dash();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case '2':
+        {
+          dot();
+          dot();
+          dash();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case '3':
+        {
+          dot();
+          dot();
+          dot();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case '4':
+        {
+          dot();
+          dot();
+          dot();
+          dot();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        case '5':
+        {
+          dot();
+          dot();
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '6':
+        {
+          dash();
+          dot();
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '7':
+        {
+          dash();
+          dash();
+          dot();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '8':
+        {
+          dash();
+          dash();
+          dash();
+          dot();
+          dot();
+          delay(400);
+          
+          break;
+        }
+        
+        case '9':
+        {
+          dash();
+          dash();
+          dash();
+          dash();
+          dot();
+          delay(400);
+        
+          break;
+        }
+        
+        case '0':
+        {
+          dash();
+          dash();
+          dash();
+          dash();
+          dash();
+          delay(400);
+          
+          break;
+        }
+        
+        default:
+        	Serial.print("\n");                   
+      }   
+    }
+  }
+}
